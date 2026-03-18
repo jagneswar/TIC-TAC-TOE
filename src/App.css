@@ -1,0 +1,12 @@
+.h1{
+  color: aliceblue;
+}
+.React{
+  color: aquamarine;
+}
+.container-heading{
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+}
