@@ -1,3 +1,14 @@
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 24px;
+}
+.scoreboard span {
+  font-weight: bold;
+  font-size: 30px;
+  color: #686848;
+}
 .container{
     display: flex;
     flex-direction: column;

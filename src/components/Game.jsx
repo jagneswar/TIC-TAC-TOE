@@ -7,6 +7,8 @@ const Game = () => {
     const [over, setOver] = useState(false)
     const [winner, setWinner] = useState(null)
     const [draw, setDraw] = useState(false)
+    const [xScore, setXScore] = useState(0);
+    const [oScore, setOScore] = useState(0);
 
     function checkWin(board){
         const combinations = [
@@ -54,6 +56,12 @@ const Game = () => {
         if(winn){
             setWinner(winn)
             setOver(true)
+            if(winn==="X") {
+                setXScore(prev=>prev+1);
+            }
+            else{
+                setOScore(prev=>prev+1);
+            }
             setTimeout(()=>{
                 funcReset()
             }, 1500)
@@ -69,6 +77,10 @@ const Game = () => {
     }
     return (
         <>
+            <div className="scoreboard">
+                <span>X: {xScore}</span>
+                <span>O: {oScore}</span>
+            </div>
             {draw && (
                 <div className='over'>Draw</div>
             )}
